@@ -1,0 +1,168 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-workbench.action.keybindingsReference"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "revealFileInOS",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "-revealFileInOS",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": ",",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+	},
+	{
+		"key": ",",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "sideBarFocus && !inputFocus && !whichkeyActive"
+	},
+	{
+		"key": "tab",
+		"command": "extension.vim_tab",
+		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+	},
+	{
+		"key": "tab",
+		"command": "-extension.vim_tab",
+		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "x",
+		"command": "magit.discard-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "k",
+		"command": "-magit.discard-at-point"
+	},
+	{
+		"key": "-",
+		"command": "magit.reverse-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "v",
+		"command": "-magit.reverse-at-point"
+	},
+	{
+		"key": "shift+-",
+		"command": "magit.reverting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+v",
+		"command": "-magit.reverting"
+	},
+	{
+		"key": "shift+o",
+		"command": "magit.resetting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+x",
+		"command": "-magit.resetting"
+	},
+	{
+		"key": "x",
+		"command": "-magit.reset-mixed"
+	},
+	{
+		"key": "ctrl+u x",
+		"command": "-magit.reset-hard"
+	},
+	{
+		"key": "y",
+		"command": "-magit.show-refs"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "acceptSelectedSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "showNextParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "file-browser.stepOut",
+		"when": "inFileBrowser"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "file-browser.stepIn",
+		"when": "inFileBrowser"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "-extension.vim_ctrl+k",
+		"when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "showPrevParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	}
+]
