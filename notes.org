@@ -1,0 +1,97 @@
+#+title: Notes
+* Projects
+** Scouting Notes
+*** Design
+1. threats & threats_cat in one nested answer, filter will be done in the backend accourding to the new column "is_scouting_notes"
+   1. how to name the col?
+*** Investigate
+1. how long the generateed url link for an img will be valid? boken url issue
+2. go over ScoutApp img flow (through the backend?)
+
+*** with raz
+- img id - the filename, client-side generated
+- Add storage_id in geolocation, to add another storage to buckets, for each bucker(5)
+- exploerer filesystem hirarchy? for CS
+- urls are valid for 1 hour as default (maybe) and configurable
+
+** Git Lecture
+*** Why
+- cuz team and stuff
+*** The perfect commit
+Commit Early And Often
+1. Commit the right changes -
+   1. Just like function, atomics ops
+   2. Same context
+   3. bad examples
+      1. https://github.com/taranisag/service-notifications/pull/37#pullrequestreview-965738320
+2. Add the right descrition alogside
+   1. Short (if its hard, it might indicate that this is should be split to 2)
+*** Branches ()
+*** Git flows
+1. github flow (us)
+2. git flow (releases)
+*** Conflics
+* Todo
+** Short term
+1.
+
+** Long term
+- FunDay
+- clean confluence
+- git best practices lessons
+- The PR for reducing logs
+* Others
+** Laptop tranfers
+- latest settings .json
+- keybinding.json
+- .devcontainer
+- org file(s)
+** Backend meeting
+- Remove old shit - old branches, dockerhub images, gemfury, jenkins?
+- dotfiles in repos
+- Django old and not supported version
+* 1o1
+- SQL learning
+- Django course
+- Hubspot emails - who is watching and responding?
+
+
+* Trash
+** User notes
+*** Questions -
+**** user-prop -
+1. Import from firestore
+2. Sync old base64 ids with new int ones
+**** user-prop table -
+1. Entity_id is hex and not int
+2. In mavrx db or global? mavrx
+**** Importing from firestore -
+1. How to import?
+2. ids are hex, in Pg-db its num, how to handle?
+*** Presentation -
+**** First goal - Match the existing state, no firebase
+1. Create table for [user]notes
+2. Import user-props to existing table
+3. Show db table
+**** Issues and open questions
+1. Id - base64 to int issue
+   - Solving by saving the mapping(64->id), updating the user-props FK, and forgetting about 64. Using a script to general SQL updates(?)
+     - In between time PG\FS issue
+   - After speaking with Eli, he suggested leaving it as it is, as this is prefered over inc-ints
+2. Export import issue
+   - There are some tools and scripts, im still researching.
+   - Manual sql generator is the fastest but also a bit risky. To tuckle that Ill test on QA extensively.
+   - Support utils - existing migration script
+3. look on specification
+*** After presentation -
+**** no need to migrate user-props from FS, only update ids of notes
+**** The issue with inishgt->notes relation or note->insight, what about img?
+**** Design doc insights -
+1. "Threats data that can be selected from drop-down fields"
+   - So text+img+threat_with savirety for each note?
+2. several notes for one insight
+
+** Taranis Global Visit Notes
+*** Smaller gap between CS and DEV
+- How do we work more closely together to keep this conecteivity and conversetion?
+- Webinar?
